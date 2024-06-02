@@ -2,6 +2,7 @@ package com.example.moptu
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import com.google.android.material.appbar.MaterialToolbar
 
 class MainActivity : AppCompatActivity() {
@@ -14,8 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LocationListFragment())
+                .replace(R.id.fragment_container, MainFragment())
                 .commit()
         }
     }
+
+
 }
