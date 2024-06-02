@@ -13,10 +13,26 @@ class MainActivity : AppCompatActivity() {
         val toolbar: MaterialToolbar = findViewById(R.id.topAppBar)
         setSupportActionBar(toolbar)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
+
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, MainFragment())
                 .commit()
+        }
+    }
+
+    override fun onBackPressed() {
+        val fragmentManager = supportFragmentManager
+        if (fragmentManager.backStackEntryCount > 0) {
+            fragmentManager.popBackStack()
+        } else {
+            super.onBackPressed()
         }
     }
 

@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Location Name"
-            android:textSize="24sp"
+            android:textSize="42sp"
             android:paddingBottom="8dp" />
 
         <TextView
@@ -21,21 +21,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Location Description"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/textViewDetailedDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Detailed Description"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:paddingTop="8dp" />
 
         <ImageView
             android:id="@+id/imageViewLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="8dp" />
+            android:paddingTop="1dp" />
 
     </LinearLayout>
 </ScrollView>
